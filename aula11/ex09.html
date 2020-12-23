@@ -4,30 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
-    <style>
-        body {
-            background-color: brown;
-            color: chartreuse;
-            font-size: 20pt;
-        }
-    </style>
+    <link rel="stylesheet" href="nacionalidade.css">
+    
 </head>
 <body>
     <h1>Senso de Nacionalidade</h1>
-    Qual é o seu pais de origem? <input type="pais">
-    <input type="button" value="avaliar" onclick="rotular">
+   
+    Qual é o seu pais de origem? <input type="text">
+    <input type="button" value="avaliar" onclick="verificar()">
 
     
     
     <script>
-        functi rotular { var pais = window.document.querySelector(input#pais)
-
-        }
-  
+ var pais = Brasil
+        function verificar(){
+            var txtBr = window.document.querySelector('input#txtBrasil')
     if (pais ==  Brasil) {
         window.document.write('Você é Brasileiro.(a)') else{
             window.document.write('Você é estrangeiro.(a)')
         }
+    }
     </script>
 </body>
 </html>
