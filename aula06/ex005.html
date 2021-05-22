@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(77, 131, 201);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com Dom</h1>
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    
+<div id="msg">Clique em mim</div><br>
+<br>
+
+
+   <script>
+        window.document.write('Olá, mundo!')
+   </script><br>
+
+    <script>
+    window.document.write(window.document.charset)
+    </script><br>
+   
+    
+
+    <script>
+         window.document.write(window.navigator.appName)
+    </script><br>
+
+    <script>
+        window.document.write(window.document.URL)
+    </script><br>
+
+
+<script>
+    var p1 = window.document.getElementsByTagName('p')[0]
+    window.document.write('Está escrito assim: ' + p1.innerText)
+     p1.style.color = 'black'
+   /* var corpo = window.document.body
+    corpo.style. = 'yellow'*/
+   
+</script><br>
+
+<script>
+     /*var p1 = window.document.getElementsById('p')[1]
+    /* document.write('Esta escrito assim:' + p1.innerHTML) Aqui no alert ele vem com as tags
+    window.alert(p1.innerText)*/
+
+
+    var d = window.document.getElementById('msg')
+    d.style.background = 'green'
+    d.innerText = 'Estou aguardando.'
+
+</script><br>
+
+<div name="sds">Clique em mim</div>
+
+<script>
+
+    /*var d = window.document.getElementById('msg')
+     window.document.getElementById('msg').innerText = 'Olá!' Comando grande de mais dá para simplificar*/
+
+    /*Tambem feito por name*/
+
+    var s = window.document.getElementsByName('sds')[0]
+    s.style.background ='red'
+     
+</script><br>
+
+<div class="trs">Clique em mim.</div><br>
+<script>
+    var n =window.document.getElementsByClassName('trs')[0]
+    n.style.background = 'black'
+</script>
+
+<div id="qs">Clique em mim.</div> 
+
+<script>
+    var w = window.document.querySelector('div#qs')
+    w.style.color = 'black'
+    w.style.background = 'yellow'
+</script>
+
+</body>
+</html>
