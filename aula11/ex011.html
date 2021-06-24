@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Cadastro de Nacionalidade</h1>
+
+    Qual a sua nascionalidade : <input type="text" name="pais" id="pais">
+    <input type="button" value="analizar" onclick="verificar()">
+    <div id="iden"></div>
+<script>
+
+
+
+function verificar() {
+    var ps = window.document.getElementById('pais')
+    var iden = window.document.getElementById('iden')
+    var nasc = String(ps.value)
+    iden.innerHTML = `Sua naconalidade é ${nasc}`
+
+    if (nasc == 'Brasil') { 
+        iden.innerHTML = 'Você é Brasileiro!'
+} else {
+    iden.innerHTML = 'Você é Estrangeiro!'
+}
+
+}
+    
+    
+</script>
+</body>
+</html>
