@@ -18,11 +18,10 @@
 
 function verificar() {
     var ps = window.document.getElementById('pais')
-    var iden = window.document.getElementById('iden')
-    var nasc = String(ps.value)
-    iden.innerHTML = `Sua naconalidade é ${nasc}`
+    var iden = window.document.getElementById('iden') /*Aqui a div iden mostrando o valor digitado pelo usuario*/
+    var nasc = String(ps.value)  /*Aqui  esta confirmando que o valor digitado dentro da caixa é o que vale para se obter o resultado da condição que será mostrada acima*/
 
-    if (nasc == 'Brasil') { 
+    if (nasc == 'Brasil') { /*Aqui a condição*/
         iden.innerHTML = 'Você é Brasileiro!'
 } else {
     iden.innerHTML = 'Você é Estrangeiro!'

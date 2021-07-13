@@ -14,18 +14,19 @@
     <div id="res"></div>
     <script>
         
-        function calcular() {
-            var txtv = window.document.querySelector('input#txtvel')
+        function calcular() { /*função chamada pelo botão de valor calcular*/
+            var txtv = window.document.querySelector('input#txtvel')/*ligação com a caixa de texto*/
+            /*var txtv = window.document.getElement.By.Id('txtvel')*/
             var res = window.document.querySelector('div#res')
            
-            var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+            var vel = Number(txtv.value)/*Aqui ele pega o valor digitado na caixa de texto txtvel e coloca dentro da variavel vel = a velocidadev*/
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`/*Essa variavel res chama o resukltado dentro da div que é uma caixa*/
            
             
-            if (vel > 60) {
-                res.innerHTML +='<p>Você está <strong>MULTADO</strong></p> por excesso de velocidade'
+            if (vel > 60) { /*Aqui a condição simples dando a condição de ser ou não multado*/
+                res.innerHTML +='<p>Você está <strong>MULTADO</strong></p> por excesso de velocidade' /*Nessa linha se não for CONCATENADO += ela elimina a mensagem anterior*/
             }
-            res.innerHTML +=  '<p> Dirija sempre com cinto ded segurança!</p>'
+            res.innerHTML +=  '<p> Dirija sempre com cinto ded segurança!</p>' /*Aqui  esta um alerta CONCATENADO, LIGSÇÃO com o resultado de dentro da div*/
         }
 
 
